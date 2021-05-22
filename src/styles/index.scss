@@ -79,18 +79,25 @@ body {
 
 .button {
   border-radius: 25px;
-  border-color: $base-black;
   padding: 5px 10px;
-}
+  font-weight: 700;
 
-.white-button {
-  color: $base-black;
-  background-color: white;
-}
+  &.white-button {
+    color: $base-black;
+    background-color: white;
+    border-color: $base-black;
+  }
 
-.black-button {
-  color: white;
-  background-color: $base-black;
+  &.black-button {
+    color: white;
+    background-color: $base-black;
+  }
+
+  &.color-button {
+    color: $primary-lightest;
+    background-color: $primary-medium;
+    border-color: $primary-medium;
+  }
 }
 
 .text-upper {
@@ -104,4 +111,16 @@ body {
 
 a.black-link {
   color: $base-black;
+}
+
+.star-image {
+  background-image: linear-gradient(rgba(212, 233, 226, 0.2), rgba(212, 233, 226, 0.2)), url("/src/images/hero/xl-hero-desktop_2021.png");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.star-text {
+  padding: 100px;
 }

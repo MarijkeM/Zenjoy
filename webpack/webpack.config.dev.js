@@ -9,6 +9,7 @@ module.exports = merge(common, {
   mode: 'development',
   devtool: 'eval-cheap-source-map',
   output: {
+    publicPath: '',
     chunkFilename: 'js/[name].chunk.js',
   },
   devServer: {
