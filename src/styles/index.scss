@@ -15,11 +15,12 @@ body {
   margin: 0;
   color: $base-black;
   background-color: $primary-lightest;
-  font-family: SoDoSans, Helvetica Neue, Helvetica, Arial, sans-serif !important;
+  font-family: "Montserrat", sans-serif !important;
 }
 
 .content {
   padding-top: 150px;
+  background-color: white;
 }
 
 /* HEADER */
@@ -42,15 +43,16 @@ body {
     cursor: pointer;
     padding: 36px 18px;
     font-size: 17px;
-  }
 
-  button:hover {
-    color: $primary-medium;
-    border-bottom: $primary-medium solid 3px;
-  }
+    &:hover,
+    &:focus {
+      color: $primary-medium;
+      border-bottom: $primary-medium solid 3px;
+    }
 
-  button.active {
-    border-bottom: $primary-medium solid 3px;
+    &.active {
+      border-bottom: $primary-medium solid 3px;
+    }
   }
 }
 
@@ -67,6 +69,12 @@ body {
 
 .navigation {
   height: 100px;
+}
+
+.logo {
+  width: 55px;
+  height: 55px;
+  flex-shrink: 0;
 }
 
 .banner {
@@ -114,13 +122,44 @@ a.black-link {
 }
 
 .star-image {
-  background-image: linear-gradient(rgba(212, 233, 226, 0.2), rgba(212, 233, 226, 0.2)), url("/src/images/hero/xl-hero-desktop_2021.png");
-  background-position: right;
+  background-image: linear-gradient(rgba(212, 233, 226, 0.2), rgba(212, 233, 226, 0.2)),
+    url("/src/images/hero/xl-hero-desktop_2021.png");
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
+  height: 100%;
 }
 
 .star-text {
   padding: 100px;
+  align-self: start;
+  width: 30%;
+}
+
+.section {
+  margin-bottom: 100px;
+
+  &.section-getting-started {
+    width: 80%;
+    margin: 10%;
+    text-align: center;
+    background-color: white;
+  }
+}
+
+
+.w-20 {
+  width: 20%;
+}
+
+.semi-bold-heading {
+  font-size: 1.5rem;
+  font-weight: 550;
+}
+
+.image-steps {
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+  margin-bottom: 1rem;
+  padding-bottom: 1.2rem;
 }
