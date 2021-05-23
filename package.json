@@ -1,7 +1,7 @@
 {
   "name": "webpack-starter",
   "version": "1.0.0",
-  "description": "A light foundation for your next frontend project based on webpack.",
+  "description": "Remake of Starbucks Rewards page.",
   "scripts": {
     "lint": "npm run lint:styles; npm run lint:scripts",
     "lint:styles": "stylelint src",
@@ -13,6 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/wbkd/webpack-starter.git"
   },
+
   "keywords": [
     "webpack",
     "startkit",
