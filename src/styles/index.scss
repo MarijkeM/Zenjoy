@@ -4,6 +4,7 @@ $primary-light: #d4e9e2;
 $primary-lightest: #f1f8f6;
 $base-grey: #f3f1e7;
 $base-black: #000;
+$gold: #cba258;
 
 *,
 *::before,
@@ -35,6 +36,14 @@ body {
   overflow: hidden;
   border-bottom: solid 3px transparent;
 
+  &.tier-tab {
+    display: flex;
+    justify-content: space-around;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   button {
     background-color: inherit;
     float: left;
@@ -42,7 +51,6 @@ body {
     outline: none;
     cursor: pointer;
     padding: 36px 18px;
-    font-size: 17px;
 
     &:hover,
     &:focus {
@@ -61,6 +69,9 @@ body {
   padding: 6px 12px;
   border: 1px solid #ccc;
   border-top: none;
+  background-color: $primary-light;
+  padding-left: 15%;
+  padding-right: 15%;
 }
 
 .navbar-light {
@@ -117,6 +128,10 @@ body {
   font-weight: 700;
 }
 
+.font-size-xs {
+  font-size: 0.7rem;
+}
+
 a.black-link {
   color: $base-black;
 }
@@ -139,21 +154,41 @@ a.black-link {
   margin-bottom: 100px;
 
   &.section-getting-started {
-    width: 80%;
-    margin: 10%;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
     background-color: white;
   }
+
+  &.section-favorites {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: $primary-lightest;
+  }
 }
 
+.gold {
+  color: $gold;
+}
 
 .w-20 {
   width: 20%;
 }
 
-.semi-bold-heading {
+.w-80 {
+  width: 80%;
+}
+
+.sm-semi-bold-heading {
   font-size: 1.5rem;
   font-weight: 550;
+}
+
+.md-semi-bold-heading {
+  font-weight: 550;
+  font-size: 1.7rem;
 }
 
 .image-steps {

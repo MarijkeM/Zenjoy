@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Starbucks&reg; Rewards</title>
   <script src="https://kit.fontawesome.com/d445352d00.js" crossorigin="anonymous"></script>
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
     integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -38,7 +39,7 @@
       </div>
       <div class="tab mr-auto h-100">
         <button class="tablinks text-upper text-bold my-auto">Menu</button>
-        <button class="tablinks text-upper text-bold">Rewards</button>
+        <button class="tablinks text-upper text-bold" id="rewardsTab">Rewards</button>
         <button class="tablinks text-upper text-bold">Gift cards</button>
       </div>
       <div class="d-flex align-items-center mr-2">
@@ -61,7 +62,7 @@
       <div class="section section-join">
         <div class="star-image">
           <div class="star-text">
-            <h2 class="text-upper">FREE COFFEE IS A TAP AWAY</h2>
+            <h2 class="md-semi-bold-heading text-upper">FREE COFFEE IS A TAP AWAY</h2>
             <p class="py-2">Join now to start earning Rewards.</p>
             <button class="button color-button">Join now</button>
             <p>Or <a href="https://www.starbucks.com/rewards/mobile-apps">join in the app</a> for the best experience
@@ -73,7 +74,7 @@
 
       <!--Getting started-->
       <div class="section section-getting-started d-flex flex-column">
-        <h2>Getting started is easy.</h2>
+        <h2 class="md-semi-bold-heading">Getting started is easy.</h2>
         <p>Earn stars and get rewarded in a few easy steps.</p>
         <div class="d-flex flex-row">
           <div class="d-flex flex-column">
@@ -81,7 +82,7 @@
               <img src="/src/images/getting-started/getting-started-1@2x.jpg" class="image-steps" />
             </div>
             <div>
-              <p class="semi-bold-heading">Create an account</p>
+              <p class="sm-semi-bold-heading">Create an account</p>
               <p>To get started, <a href="https://www.starbucks.com/account/create">join now</a>.
                 You can also <a href="https://www.starbucks.com/rewards/mobile-apps">join in the app</a>
                 to get access to the full range of Starbucks® Rewards benefits.</p>
@@ -92,7 +93,7 @@
               <img src="/src/images/getting-started/getting-started-2@2x.jpg" class="image-steps" />
             </div>
             <div>
-              <p class="semi-bold-heading">Order and pay how you’d like</p>
+              <p class="sm-semi-bold-heading">Order and pay how you’d like</p>
               <p>Use cash, credit/debit card or save some time and pay right through the app. You’ll collect Stars all
                 ways. <a href="#">Learn how</a>.</p>
             </div>
@@ -102,7 +103,7 @@
               <img src="/src/images/getting-started/getting-started-3@2x.jpg" class="image-steps" />
             </div>
             <div>
-              <p class="semi-bold-heading">Earn Stars, get Rewards</p>
+              <p class="sm-semi-bold-heading">Earn Stars, get Rewards</p>
               <p>As you earn Stars, you can redeem them for Rewards—like free food, drinks, and more. Start redeeming
                 with
                 as little as 25 Stars!</p>
@@ -114,31 +115,103 @@
 
       <!--Favorites-->
       <div class="section section-favorites">
-        <p>Favorites</p>
+
+        <h2 class="md-semi-bold-heading pt-5">Get your favorites for free</h2>
+        <!-- Tab links -->
+          <div role="tablist" class="tab tier-tab">
+            <button class="tablinks sm-semi-bold-heading" onclick="openReward(event, '25')" id="firstRewardTab">25
+              <i class="fas fa-star gold font-size-xs"></i>
+            </button>
+            <button class="tablinks sm-semi-bold-heading" onclick="openReward(event, '50')">50
+              <i class="fas fa-star gold font-size-xs"></i>
+            </button>
+            <button class="tablinks sm-semi-bold-heading" onclick="openReward(event, '150')">150
+              <i class="fas fa-star gold font-size-xs"></i>
+            </button>
+            <button class="tablinks sm-semi-bold-heading" onclick="openReward(event, '200')">200
+              <i class="fas fa-star gold font-size-xs"></i>
+            </button>
+            <button class="tablinks sm-semi-bold-heading" onclick="openReward(event, '400')">400
+              <i class="fas fa-star gold font-size-xs"></i>
+            </button>
+          </div>
+
+        <!-- Tab content -->
+        <div id="25" class="tabcontent">
+          <div class="d-flex align-items-center">
+            <img src="images/reward-tiers/025.png" class="img-fluid w-50">
+            <div>
+              <h3>Customize your drink</h3>
+              <p>Make your drink just right with an extra espresso shot, dairy substitute or a dash of your favorite
+                syrup.</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="50" class="tabcontent">
+          <div class="d-flex align-items-center">
+            <img src="images/reward-tiers/050.png" class="img-fluid w-50">
+            <div>
+              <h3>Brewed hot coffee, bakery item or hot tea</h3>
+              <p>Pair coffee cake or an almond croissant with your fresh cup of hot brew.</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="150" class="tabcontent">
+          <div class="d-flex align-items-center">
+            <img src="images/reward-tiers/150.png" class="img-fluid w-50">
+            <div>
+              <h3>Handcrafted drink, hot breakfast or parfait</h3>
+              <p>Have a really good morning with a breakfast sandwich, oatmeal or your favorite drink.</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="200" class="tabcontent">
+          <div class="d-flex align-items-center">
+            <img src="images/reward-tiers/200.png" class="img-fluid w-50">
+            <div>
+              <h3>Salad, sandwich or protein box</h3>
+              <p>Nourish your day with a hearty Chipotle Chicken Wrap or Eggs & Cheese Protein Box.</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="400" class="tabcontent">
+          <div class="d-flex align-items-center">
+            <img src="images/reward-tiers/400.png" class="img-fluid w-50">
+            <div>
+              <h3>Select merchandise or at-home coffee</h3>
+              <p>Take home a signature cup, a bag of coffee or your choice of select coffee accessories.</p>
+            </div>
+          </div>
+        </div>
       </div>
 
 
       <!--Extras-->
       <div class="section section-extras">
-        <p>Extras</p>
+        <h2 class="md-semi-bold-heading">Endless Extras</h2>
       </div>
 
 
       <!--Payments-->
       <div class="section section-payments">
-        <p>Payments</p>
+        <h2 class="md-semi-bold-heading">Cash or card, you earn Stars</h2>
       </div>
 
 
       <!--Star codes-->
       <div class="section section-star-codes">
-        <p>star codes</p>
+        <h2 class="md-semi-bold-heading">Star Codes</h2>
+        <h2 class="md-semi-bold-heading">Questions?</h2>
       </div>
 
 
       <!--Information-->
       <div class="section section-information">
-        <p>information</p>
+        <p>At participating stores. Restrictions apply.</p>
       </div>
 
       <!--Footer-->
@@ -149,6 +222,27 @@
     </div>
   </div>
   </div>
+  <script>
+    function openReward(evt, points) {
+      console.log("open reward");
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(points).style.display = "block";
+      evt.currentTarget.className += " active";
+    };
+
+    document.getElementById("firstRewardTab").click();
+    document.getElementById("rewardsTab").click();
+  </script>
+
+
 </body>
 
 </html>
